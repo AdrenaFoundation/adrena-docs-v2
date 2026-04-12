@@ -25,3 +25,23 @@ Since inception, Adrena's ethos is to keep it simple and fair, and to provide a 
 ## Monitoring
 
 Adrena monitors `markout_1m`, `5m`, and `10m` to see the PnL of trades 1/5/10 minutes after opening, allowing the team to identify and respond to toxic flow patterns.
+
+---
+
+## Position Exit Fee Tiers (Release 39)
+
+Monitoring is a reactive measure. Release 39 introduced a **proactive** countermeasure: position exit fee multipliers that make short-lived positions significantly more expensive to close.
+
+The underlying motivation: a trader who opens and closes within seconds or minutes during a sharp price move faces an outsized close fee, eliminating the economic incentive for this behavior without harming normal trading.
+
+| Time Since Open | Close Fee Multiplier |
+|-----------------|---------------------|
+| 0 – 4 min | Cannot close |
+| 4 – 7 min | 15× |
+| 7 – 15 min | 3× |
+| 15 – 30 min | 1.5× |
+| 30 min+ | 1× (normal) |
+
+Liquidations are exempt — no extra fee is charged on liquidated positions.
+
+See [Position Exit Fees](../about-adrena/what-is-adrena/position-exit-fees.md) for the full breakdown.
