@@ -38,11 +38,7 @@ Advanced features or integrations will be left to external modules/projects (eve
 
 ## BE RESILIENT
 
-A good platform should be built on trust. In our world that means trust in code. That said, we think consistent audits when changes occur are important. The codebase is currently completing an audit for launch by [Ottersec](https://osec.io/), and we plan on a second one soon after. We will audit any code changes touching important components that hit mainnet.
-
-The codebase will also be completely open source.
-
-Lastly, we will have an ongoing bug bounty program on [Immunefi](https://immunefi.com/) shortly after launch to encourage others in the community to keep our platform secure. The more eyeballs the better.
+A good platform should be built on trust. In our world that means trust in code. That said, we think consistent audits when changes occur are important. The codebase is currently audited by Fidesium. We will audit any code changes touching important components that hit mainnet.
 
 ## BE TRANSPARENT
 

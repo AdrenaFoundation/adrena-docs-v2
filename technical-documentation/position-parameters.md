@@ -19,7 +19,7 @@ This page describes the parameters and mechanics that govern how positions are o
 
 ## Opening a Position
 
-At open, a flat **open fee** (% of position size) is charged. Trades execute at oracle price with zero slippage.
+Trades execute at oracle price with zero slippage.
 
 For positions in [Autonom Pools](autonom-pools.md) (RWA/synthetic assets), the position can only be opened during the asset's defined market hours.
 
@@ -44,21 +44,11 @@ Positions also accrue a [Virtual Funding Rate](virtual-funding-rate.md) based on
 
 ## Closing a Position
 
-A flat **close fee** (% of position size) applies at close. If the position is closed within the first 30 minutes, an **exit fee multiplier** applies:
-
-| Time Since Open | Multiplier |
-|-----------------|-----------|
-| 0 – 4 min | Cannot close |
-| 4 – 7 min | 15× close fee |
-| 7 – 15 min | 3× close fee |
-| 15 – 30 min | 1.5× close fee |
-| 30 min+ | 1× (normal) |
-
-See [Position Exit Fees](../about-adrena/what-is-adrena/position-exit-fees.md) for full details.
+A flat **close fee** (% of position size) applies at close. 
 
 ### Collateral Modification Lock
 
-After adding or removing collateral from an existing position, the position is locked for **2 minutes** before it can be closed. This prevents collateral manipulation to game the exit fee tiers.
+After adding or removing collateral from an existing position, the position is locked for **4 minutes** before it can be closed. This prevents collateral manipulation to game the exit fee tiers.
 
 ---
 
@@ -66,7 +56,6 @@ After adding or removing collateral from an existing position, the position is l
 
 A position is liquidated when the remaining collateral falls to the liquidation margin threshold. Key properties:
 
-- **No extra liquidation fee**: Liquidations charge only the standard close fee — there is no separate liquidation penalty (see [No Liquidation Fees](../about-adrena/what-is-adrena/no-liquidation-fees.md))
 - **Conservative pricing**: Liquidation prices use the oracle's conservative bound (low for longs, high for shorts)
 - **Asymmetric liquidation defense** (GMX pools): Requires backup oracle confirmation before liquidating, preventing liquidations on single-oracle staleness
 - **Autonom pool liquidations**: Cannot execute outside market hours (no reliable price available)
@@ -75,7 +64,7 @@ A position is liquidated when the remaining collateral falls to the liquidation 
 
 ## Market Hours (Autonom Pools Only)
 
-Positions in [Autonom Pools](autonom-pools.md) are subject to the trading hours of the underlying real-world asset. Opening a new position outside market hours returns a `MarketIsClosed` error. Closing positions is permitted at any time to allow traders to exit risk.
+Positions in [Autonom Pools](autonom-pools.md) are subject to the trading hours of the underlying real-world asset. Opening a new position outside market hours returns a `MarketIsClosed` error. 
 
 ---
 
@@ -83,9 +72,8 @@ Positions in [Autonom Pools](autonom-pools.md) are subject to the trading hours 
 
 | Fee | Timing | Basis |
 |-----|--------|-------|
-| Open fee | At entry | Flat % of position size |
 | Borrow fee | Continuous | Per-second, utilization-based |
 | Virtual Funding Rate | Continuous | Hourly OI imbalance |
-| Close fee | At exit | Flat % of position size × exit multiplier |
+| Close fee | At exit | Flat % of position size|
 
 See [Fees](../about-adrena/fees.md) for distribution details.

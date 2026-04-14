@@ -10,6 +10,8 @@ source: "https://docs.adrena.trade/tokenomics/tokenomics-overview"
 Adrena has two core tokens:
 
 - **ADX** — The governance and revenue-sharing token
-- **ALP** — The liquidity provider token (collateral backing trader positions)
+- **ALP** — The liquidity provider token for the crypto pool (collateral backing trader positions)
+- **RWALP** — The liquidity provider token for the RWA pool (collateral backing trader positions)
 
-100% of platform revenue is distributed to ADX stakers and ALP holders.
+80% of platform revenue is distributed to ADX stakers and ALP holders.
+

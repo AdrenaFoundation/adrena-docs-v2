@@ -9,14 +9,13 @@ Adrena uses oracle price feeds to determine trade execution prices. All trades e
 
 ---
 
-## Three-Provider Oracle System
+## Multi-Provider Oracle System
 
-As of Release 39, Adrena sources prices from **three independent oracle providers**. Each provider covers a distinct feed ID range:
+As of Release 39, Adrena sources prices from **multiple independent oracle providers**. Each provider covers a distinct feed ID range:
 
 | Provider | Feed ID Range | Mechanism |
 |----------|--------------|-----------|
-| **ChaosLabs** | 0 – 29 | Off-chain signed batch price submissions |
-| **Autonom** | 30 – 141 | Off-chain signed batch prices + market session data |
+ **Autonom** | 30 – 141 | Off-chain signed batch prices + market session data |
 | **Switchboard** | 142 – 255 | On-chain quote account verification |
 
 Switchboard prices are verified entirely on-chain — no off-chain oracle infrastructure dependency. ChaosLabs and Autonom deliver signed price batches that are validated on-chain before use.
@@ -35,13 +34,13 @@ A `MultiOracleConfig` is attached to each pool, controlling how prices from mult
 
 ### Default configurations
 
-**Standard (GMX) Pools** — crypto assets:
-- Providers order: Switchboard → ChaosLabs → Autonom
+**Standard (GMX style) Pools** — crypto assets:
+- Providers order: Switchboard → Autonom
 - `min_agree`: 2 (two-of-three must agree)
 - `price_diff_threshold_bps`: 100
 
 **Autonom Pools** — RWA/synthetic assets:
-- Providers order: Autonom → Switchboard → ChaosLabs
+- Providers order: Autonom → Switchboard
 - `min_agree`: 1 (single provider sufficient)
 - `price_diff_threshold_bps`: 100
 
@@ -97,4 +96,4 @@ Both are enabled by default for GMX pools and disabled for Autonom pools (see [A
 
 ## Oracle Capacity
 
-The oracle account supports up to **50 simultaneous price slots** (expanded from 20 in Release 37). This accommodates the full range of assets across crypto (ChaosLabs/Switchboard) and RWA/synthetic (Autonom) markets.
+The oracle account supports up to **50 simultaneous price slots** (expanded from 20 in Release 37). This accommodates the full range of assets across crypto (Autonom/Switchboard) and RWA/synthetic (Autonom/Switchboard) markets.

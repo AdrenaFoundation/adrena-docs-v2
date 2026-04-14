@@ -25,11 +25,12 @@ The rate scales with the imbalance — the more skewed OI is, the higher the fun
 
 ## Rate Calculation
 
-The hourly funding rate is determined by a two-slope sensitivity model:
+The hourly funding rate is determined by OI imbalance and a configurable sensitivity:
 
-1. **OI Imbalance** = `(long OI − short OI) / total OI` (or vice versa), expressed as a ratio
-2. **Funding Rate** = `imbalance × imbalance_sensitivity_bps / 10,000` (per hour)
-3. Rate is capped at `max_hourly_funding_rate`
+1. **OI Imbalance** =  |long OI − short OI| / total OI, expressed in BPS
+2. **Scaled Imbalance** = imbalance × imbalance_sensitivity_bps / 10,000
+3. **Funding Rate** = max_hourly_funding_rate × scaled_imbalance / 10,000
+4. Rate is capped at `max_hourly_funding_rate`
 
 The `min_total_oi_usd` threshold must be exceeded for VFR to activate — this prevents the rate from firing on negligible open interest.
 

@@ -7,32 +7,17 @@ source: "https://docs.adrena.trade/about-adrena/fees"
 
 Adrena charges fees in four categories:
 
-| Fee Type | When Charged | Basis |
-|----------|-------------|-------|
-| **Open position** | At trade entry | Flat % of position size |
-| **Close position** | At trade exit | Flat % of position size (+ exit multiplier if early) |
+| Fee Type | When Charged | Basis                                  |
+|----------|-------------|----------------------------------------|
+| **Close position** | At trade exit | Flat % of position size at open        |
 | **Borrow fee** | Ongoing while position is open | Utilization-based (accrues per second) |
-| **Swap / liquidity fee** | Adding or removing ALP liquidity | % of swap value |
+| **Swap / liquidity fee** | Adding or removing ALP liquidity | % of swap value                        |
 
 ---
 
-## Open & Close Fees
+## Close Fees
 
-Open and close fees are a flat percentage of the **position size** (not collateral). The exact rates are set per asset and visible on the trading UI.
-
-### Position Exit Fee Multipliers
-
-Closing a position within the first 30 minutes incurs a multiplied close fee to deter short-lived exploitation. See [Position Exit Fees](what-is-adrena/position-exit-fees.md) for the full multiplier table.
-
-| Time Since Open | Close Fee Multiplier |
-|-----------------|---------------------|
-| 0 – 4 min | Cannot close |
-| 4 – 7 min | 15× |
-| 7 – 15 min | 3× |
-| 15 – 30 min | 1.5× |
-| 30 min+ | 1× (normal) |
-
----
+Close fees are a flat percentage of the **position size** (not collateral). The exact rates are set per asset and visible on the trading UI.
 
 ## Borrow Fee (Two-Slope Model)
 

@@ -42,8 +42,6 @@ Autonom Pool assets correspond to real-world instruments that only trade during 
 - **Opening a position** outside market hours returns a `MarketIsClosed` error
 - **Existing positions** remain open through market close — they settle at next open or at the holder's discretion
 
-> **Note:** Closing a position is permitted outside market hours to allow traders to exit risk they cannot actively manage while the market is closed.
-
 ---
 
 ## Market Special Events
