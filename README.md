@@ -1,6 +1,5 @@
 ---
 title: "Adrena Documentation"
-source: "https://docs.adrena.trade"
 ---
 
 # Adrena Documentation
