@@ -46,9 +46,14 @@ Positions also accrue a [Virtual Funding Rate](virtual-funding-rate.md) based on
 
 A flat **close fee** (% of position size) applies at close. 
 
-### Collateral Modification Lock
+### Open + Collateral Modification Locks
 
-After adding or removing collateral from an existing position, the position is locked for **4 minutes** before it can be closed. This prevents collateral manipulation to game the exit fee tiers.
+Two separate minimum-age gates apply before a position can be closed:
+
+- **Minimum open time: 4 minutes** (`MIN_POSITION_OPEN_TIME_SECONDS = 240`). A freshly opened position cannot be closed in its first 4 minutes.
+- **Minimum wait after collateral change: 2 minutes** (`MIN_POSITION_UPDATE_TIME_BEFORE_CLOSE_SECONDS = 120`). After adding or removing collateral, the position cannot be closed for 2 minutes.
+
+Both gates prevent collateral manipulation to game the exit fee tiers.
 
 ---
 

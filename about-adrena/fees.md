@@ -11,6 +11,7 @@ Adrena charges fees in four categories:
 |----------|-------------|----------------------------------------|
 | **Close position** | At trade exit | Flat % of position size at open        |
 | **Borrow fee** | Ongoing while position is open | Utilization-based (accrues per second) |
+| **Virtual Funding Rate (VFR)** | Ongoing while position is open | Hourly, OI-imbalance based |
 | **Swap / liquidity fee** | Adding or removing ALP liquidity | % of swap value                        |
 
 ---
@@ -50,15 +51,14 @@ Fees apply when adding or removing liquidity through ALP minting and redemption.
 
 ## Fee Distribution
 
-All protocol fees are split across four recipients:
+All protocol fees are split across five buckets. Each bucket has its own BPS share; the split sums to 10,000 BPS (100%) per pool and is configurable per pool by governance.
 
-| Bucket | Recipient |
-|--------|-----------|
-| **LP fee** | ALP holders (proportional to pool share) |
-| **LM fee** | Liquidity mining participants |
-| **Protocol fee** | Protocol treasury |
-| **Manager fee** | Pool manager / creator |
+| Bucket | Recipient | Default BPS |
+|--------|-----------|-------------|
+| **LP fee** | ALP holders (proportional to pool share) | 7,000 (70%) |
+| **Manager fee** | Pool manager / creator (paid to a stable-mint token account) | 1,500 (15%) |
+| **Protocol fee** | Protocol treasury | 1,000 (10%) |
+| **LM fee** | Liquidity mining participants (ADX stakers) | 500 (5%) |
+| **Referrer fee** | Active referrers | 0 (disabled by default) |
 
-Referrer fees are sourced from the protocol fee share and distributed to active referrers.
-
-The exact BPS split for each bucket is configurable per pool by governance. This model replaced the single unified fee bucket used prior to Release 39.
+Each bucket accrues independently on the pool state (`lp_fee_debt_usd`, `manager_fee_debt_usd`, `protocol_fee_debt_usd`, `lm_fee_debt_usd`, `referrers_fee_debt_usd`) and is distributed by the on-chain `distribute_fees` instruction. This five-bucket model replaced the single unified fee bucket used prior to Release 39.
