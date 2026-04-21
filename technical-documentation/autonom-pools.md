@@ -17,10 +17,12 @@ Autonom Pools are a new pool type in Adrena that enables trading on **real-world
 | Assets | Native crypto tokens (SOL, BTC, ETH…) | Synthetic: equities, commodities, RWA |
 | Custody | Holds actual tokens | No token custody — synthetic PDA only |
 | Collateral | Token or stablecoin | Stablecoin only |
-| Oracle provider | ChaosLabs / Switchboard consensus | Autonom oracle (primary), others as backup |
-| Multi-oracle consensus | Requires 2-of-3 agreement | Requires 1-of-3 agreement |
+| Oracle providers (default) | Autonom → Switchboard → ChaosLabs | Autonom → Switchboard → ChaosLabs |
+| Multi-oracle `min_agree` (default) | 1 | 1 |
 | Market hours | 24/7 | Subject to underlying market trading hours |
 | Position settlement | In underlying token | USD-denominated |
+
+Both pool types ship with identical default `MultiOracleConfig` (Autonom primary, `min_agree=1`, `staleness_seconds=7`). Governance can tune each pool's provider order, min_agree, and liquidation defenses independently via `set_pool_oracle_config`.
 
 ---
 

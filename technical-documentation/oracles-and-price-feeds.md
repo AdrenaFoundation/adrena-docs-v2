@@ -15,10 +15,11 @@ As of Release 39, Adrena sources prices from **multiple independent oracle provi
 
 | Provider | Feed ID Range | Mechanism |
 |----------|--------------|-----------|
- **Autonom** | 30 – 141 | Off-chain signed batch prices + market session data |
-| **Switchboard** | 142 – 255 | On-chain quote account verification |
+| **ChaosLabs** | 0 – 29 | Off-chain signed batch prices (secp256k1) |
+| **Autonom** | 30 – 141 | Off-chain signed batch prices (secp256k1) + market session data |
+| **Switchboard** | 142 – 255 | On-chain quote account verification (ed25519 precompile) |
 
-Switchboard prices are verified entirely on-chain — no off-chain oracle infrastructure dependency. ChaosLabs and Autonom deliver signed price batches that are validated on-chain before use.
+Switchboard prices are verified entirely on-chain via the ed25519 precompile. ChaosLabs and Autonom deliver signed price batches that are secp256k1-recovered and validated on-chain before use.
 
 ---
 
@@ -34,15 +35,23 @@ A `MultiOracleConfig` is attached to each pool, controlling how prices from mult
 
 ### Default configurations
 
+Both pool types ship with the same baseline multi-oracle config. Governance can tune these post-migration via `set_pool_oracle_config`.
+
 **Standard (GMX style) Pools** — crypto assets:
-- Providers order: Switchboard → Autonom
-- `min_agree`: 2 (two-of-three must agree)
+- Providers order: Autonom → Switchboard → ChaosLabs
+- `min_agree`: 1
 - `price_diff_threshold_bps`: 100
+- `staleness_seconds`: 7
+- `asymmetric_liquidation`: disabled
+- `circuit_breaker_enabled`: disabled
 
 **Autonom Pools** — RWA/synthetic assets:
-- Providers order: Autonom → Switchboard
-- `min_agree`: 1 (single provider sufficient)
+- Providers order: Autonom → Switchboard → ChaosLabs
+- `min_agree`: 1
 - `price_diff_threshold_bps`: 100
+- `staleness_seconds`: 7
+- `asymmetric_liquidation`: disabled
+- `circuit_breaker_enabled`: disabled
 
 ---
 
@@ -90,10 +99,10 @@ When enabled, the circuit breaker **pauses all liquidations** if no backup oracl
 | `circuit_breaker_enabled` | Enable/disable the circuit breaker (0/1) |
 | `circuit_breaker_seconds` | Freshness window for the backup oracle (seconds) |
 
-Both are enabled by default for GMX pools and disabled for Autonom pools (see [Autonom Pools](autonom-pools.md)).
+Both defenses are **disabled by default** on both pool types; governance can enable them per pool via `set_pool_oracle_config` once the operator is comfortable with oracle coverage.
 
 ---
 
 ## Oracle Capacity
 
-The oracle account supports up to **50 simultaneous price slots** (expanded from 20 in Release 37). This accommodates the full range of assets across crypto (Autonom/Switchboard) and RWA/synthetic (Autonom/Switchboard) markets.
+The oracle account supports up to **50 simultaneous price slots** (expanded from 20 in Release 39 via `migrate_oracle_v38_to_v39`). This accommodates the full range of assets across crypto (ChaosLabs/Autonom/Switchboard) and RWA/synthetic (Autonom/Switchboard) markets.
