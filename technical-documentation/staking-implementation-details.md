@@ -5,4 +5,3 @@ source: "https://docs.adrena.trade/technical-documentation/staking-implementatio
 
 # Staking Implementation Details 🏦
 
-> ⚠️ Page content to be fetched and populated. Run the local scraper script for full content.
