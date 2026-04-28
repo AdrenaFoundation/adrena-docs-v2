@@ -1,4 +1,4 @@
-#Referral System
+# Referral System
 
 Referrers can earn 100 bps of trading fees when their audience trades via their referral link.
 
