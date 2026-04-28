@@ -11,7 +11,7 @@ Key features:
 
 - **Peer-to-Pool model** — Liquidity Providers (ALP holders) act as the counterparty to traders
 - **Fast execution** — Single-transaction trades with no keeper delay
-- **Equitable tokenomics** — 100% of revenue distributed to token holders
+- **Equitable tokenomics** — Revenue majority distributed to LPs and token holders
 
 ## Sections
 
