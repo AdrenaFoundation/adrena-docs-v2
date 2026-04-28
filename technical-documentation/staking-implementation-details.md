@@ -30,6 +30,7 @@ Starting conditions:
 
 100 Staked 360 days
 
+--
 
 100$ of revenue is to be distributed this round to ALP.
 
@@ -39,9 +40,11 @@ Starting conditions:
 
 100 ALP Staked 360 days <=> 100  * 2.50 (250)
 
+--
 
 Total weight is 800 + 175 + 250 (1225)
 
+--
 
 And so final distribution is
 
