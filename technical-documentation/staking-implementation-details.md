@@ -11,7 +11,7 @@ The exact distribution is as follow:
 
 75% for ALP (liquid), shared with ALP Locked Stakers
 
-30% for RW-ALP (liquid), shared with RW-ALP Locked Stakers
+50% for RW-ALP (liquid), shared with RW-ALP Locked Stakers
 
 5% for ADX, shared with ADX Stakers (liquid and locked)
 
