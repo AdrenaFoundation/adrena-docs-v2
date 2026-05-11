@@ -65,7 +65,7 @@ All protocol fees are split across five buckets. Each bucket has its own BPS sha
 **RW-ALP**
 | Bucket | Recipient | Default BPS |
 |--------|-----------|-------------|
-| **LP fee** | ALP holders (proportional to pool share) | 5,000 (50%) |
+| **LP fee** | RW-ALP holders (proportional to pool share) | 5,000 (50%) |
 | **Manager fee** | Pool manager / creator (paid to a stable-mint token account) | 4,000 (40%) |
 | **Protocol fee** | Protocol treasury | 5000 (5%) |
 | **LM fee** | Liquidity mining participants (ADX stakers) | 500 (5%) |
