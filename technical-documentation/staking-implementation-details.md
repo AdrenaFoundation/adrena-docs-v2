@@ -48,11 +48,11 @@ Total weight is 800 + 175 + 250 (1225)
 
 And so final distribution is
 
-1000/1225 * 100$ -> to the LP pool (all ALP appreciating)
+800/1225 * 100$ -> $65.31 to the LP pool (all ALP appreciating)
 
-75/1225 * 100$ going as bonus USDC yield to ALP 180 days Stakers
+175/1225 * 100$ -> $14.28 going as bonus USDC yield to ALP 180 days Stakers
 
-150/1225 * 100$ going as bonus USDC yield to ALP 360 days Stakers
+250/1225 * 100$ -> $20.41 going as bonus USDC yield to ALP 360 days Stakers
 
 ---
 
