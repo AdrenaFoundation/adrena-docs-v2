@@ -55,9 +55,9 @@ All protocol fees are split across five buckets. Each bucket has its own BPS sha
 
 | Bucket | Recipient | Default BPS |
 |--------|-----------|-------------|
-| **LP fee** | ALP holders (proportional to pool share) | 7,000 (70%) |
+| **LP fee** | ALP holders (proportional to pool share) | 7,500 (75%) |
 | **Manager fee** | Pool manager / creator (paid to a stable-mint token account) | 1,500 (15%) |
-| **Protocol fee** | Protocol treasury | 1,000 (10%) |
+| **Protocol fee** | Protocol treasury | 5000 (5%) |
 | **LM fee** | Liquidity mining participants (ADX stakers) | 500 (5%) |
 | **Referrer fee** | Active referrers | 0 (disabled by default) |
 
