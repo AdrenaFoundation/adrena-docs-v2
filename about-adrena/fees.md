@@ -59,6 +59,6 @@ All protocol fees are split across five buckets. Each bucket has its own BPS sha
 | **Manager fee** | Pool manager / creator (paid to a stable-mint token account) | 1,500 (15%) |
 | **Protocol fee** | Protocol treasury | 5000 (5%) |
 | **LM fee** | Liquidity mining participants (ADX stakers) | 500 (5%) |
-| **Referrer fee** | Active referrers | 0 (disabled by default) |
+| **Referrer fee** | Active referrers | 100 (see Referral System) |
 
 Each bucket accrues independently on the pool state (`lp_fee_debt_usd`, `manager_fee_debt_usd`, `protocol_fee_debt_usd`, `lm_fee_debt_usd`, `referrers_fee_debt_usd`) and is distributed by the on-chain `distribute_fees` instruction. This five-bucket model replaced the single unified fee bucket used prior to Release 39.
