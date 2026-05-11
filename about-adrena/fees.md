@@ -53,10 +53,20 @@ Fees apply when adding or removing liquidity through ALP minting and redemption.
 
 All protocol fees are split across five buckets. Each bucket has its own BPS share; the split sums to 10,000 BPS (100%) per pool and is configurable per pool by governance.
 
+**ALP**
 | Bucket | Recipient | Default BPS |
 |--------|-----------|-------------|
 | **LP fee** | ALP holders (proportional to pool share) | 7,500 (75%) |
 | **Manager fee** | Pool manager / creator (paid to a stable-mint token account) | 1,500 (15%) |
+| **Protocol fee** | Protocol treasury | 5000 (5%) |
+| **LM fee** | Liquidity mining participants (ADX stakers) | 500 (5%) |
+| **Referrer fee** | Active referrers | 100 (see Referral System) |
+
+**RW-ALP**
+| Bucket | Recipient | Default BPS |
+|--------|-----------|-------------|
+| **LP fee** | ALP holders (proportional to pool share) | 5,000 (50%) |
+| **Manager fee** | Pool manager / creator (paid to a stable-mint token account) | 4,000 (40%) |
 | **Protocol fee** | Protocol treasury | 5000 (5%) |
 | **LM fee** | Liquidity mining participants (ADX stakers) | 500 (5%) |
 | **Referrer fee** | Active referrers | 100 (see Referral System) |
