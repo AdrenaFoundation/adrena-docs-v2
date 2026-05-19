@@ -4,7 +4,7 @@ title: "Adrena Documentation"
 
 # Adrena Documentation
 
-Welcome to the official Adrena documentation. Adrena is a GMX-inspired perpetual trading venue built on Solana, featuring an equitable tokenomic foundation, zero liquidation fees, and fast on-chain trade execution.
+Welcome to the official Adrena documentation. Adrena is a GMX-inspired perpetual trading venue built on Solana, featuring an equitable tokenomic foundation and fast on-chain trade execution.
 
 ## Quick Links
 

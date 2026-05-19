@@ -5,7 +5,7 @@ source: "https://docs.adrena.trade/about-adrena/what-is-adrena/peer-to-pool-perp
 
 # Peer-to-Pool Perp Model
 
-Adrena uses an Asset Backed (or peer-to-pool) Perp Model (similar to what GMX introduced). This system removes a lot of risks usually present in order-book based Perp DEXs. One can think of this model as a PvE model rather than the usual PvP model, enabled by Liquidity Providers (ALP holders) that provide liquidity to traders to leverage their trades.
+Adrena uses an Asset Backed (or peer-to-pool) Perp Model (similar to what GMX introduced). This system removes a lot of risks usually present in order-book based Perp DEXs. One can think of this model as a PvE model rather than the usual PvP model, enabled by Liquidity Providers (ALP and RWALP holders) that provide liquidity to traders to leverage their trades.
 ## How It Works
 
 In a typical order-book based Perp DEX, when a trader opens a position, the counterparty is another trader betting in the opposite direction. In the asset-backed model, traders' counterparty is themselves and the LP pool (depending on the direction of the trade).
@@ -33,4 +33,4 @@ The user borrows stablecoins from the Liquidity Pool based on the platform's max
 
 ## Risks for Liquidity Providers
 
-As a Liquidity Provider (ALP holder), you are partially exposed to trader PnL depending on trade direction. The pool's goal is to maximize fee revenue through high trading volume.
+As a Liquidity Provider (ALP and RWALP holder), you are partially exposed to trader PnL depending on trade direction. The pool's goal is to maximize fee revenue through high trading volume.

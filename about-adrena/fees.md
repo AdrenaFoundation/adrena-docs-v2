@@ -12,7 +12,7 @@ Adrena charges fees in four categories:
 | **Close position** | At trade exit | Flat % of position size at open        |
 | **Borrow fee** | Ongoing while position is open | Utilization-based (accrues per second) |
 | **Virtual Funding Rate (VFR)** | Ongoing while position is open | Hourly, OI-imbalance based |
-| **Swap / liquidity fee** | Adding or removing ALP liquidity | % of swap value                        |
+| **Swap / liquidity fee** | Adding or removing ALP / RWALP liquidity | % of swap value                        |
 
 ---
 
@@ -45,7 +45,7 @@ See [Virtual Funding Rate](../technical-documentation/virtual-funding-rate.md) f
 
 ## Swap / Liquidity Fees
 
-Fees apply when adding or removing liquidity through ALP minting and redemption. Rates vary based on whether the swap moves the pool's asset ratios toward or away from their targets.
+Fees apply when adding or removing liquidity through ALP / RWALP minting and redemption. Rates vary based on whether the swap moves the pool's asset ratios toward or away from their targets.
 
 ---
 

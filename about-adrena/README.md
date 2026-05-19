@@ -9,7 +9,7 @@ Adrena is a perpetual futures trading platform built on Solana. It uses an asset
 
 Key features:
 
-- **Peer-to-Pool model** - Liquidity Providers (ALP holders) act as the counterparty to traders
+- **Peer-to-Pool model** - Liquidity Providers (ALP and RWALP holders) act as the counterparty to traders
 - **Fast execution** - Single-transaction trades with no keeper delay
 - **Equitable tokenomics** - Revenue majority distributed to LPs and token holders
 

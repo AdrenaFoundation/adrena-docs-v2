@@ -6,5 +6,5 @@ source: "https://docs.adrena.trade/about-adrena/what-is-adrena/trading-competiti
 # Trading Competitions 🏋️
 
 
-Adrena runs periodic trading competitions for users. Check [app.adrena.trade](url) for active competitions.
+Adrena runs periodic trading competitions for users. Check [adrena.trade/ranked](https://www.adrena.trade/ranked) for active competitions.
 More coming soon..
