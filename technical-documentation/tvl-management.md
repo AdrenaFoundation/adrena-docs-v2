@@ -47,7 +47,7 @@ New Cap  =  min (  Current Cap × 1.30  ,  ────────────�
                                                     APY_target
 ```
 
-Where **APY\_target = 27%** (Green band midpoint, buffered against downside drift).
+Where **F\_run-rate** - annualized fee run rate net of trader PnL and ULP drag, after the 75% LP share (USD per year); computed as (F\_30 × 365/30 × 0.75) - TraderPnL\_30 - ULP\_30, **APY\_target = 27%** (Green band midpoint, buffered against downside drift).
 
 Two triggers:
 
