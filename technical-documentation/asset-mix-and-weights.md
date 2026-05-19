@@ -12,8 +12,8 @@ The target weights derive from four principles applied jointly.
 
 **1. Volatility-weighted allocation.** Among the volatile assets, weight is inversely proportional to volatility relative to the lowest-volatility asset (BTC). More volatile assets receive smaller weights so that no single asset's price swings dominate the LP token's NAV.
 
-- SOL is 1.5–1.7x BTC volatility → strict weighting puts SOL at ~60–70% of BTC weight
-- BONK is 1.7–2.8x BTC volatility → strict weighting puts BONK at ~35–60% of BTC weight
+- SOL is 1.5-1.7x BTC volatility → strict weighting puts SOL at ~60-70% of BTC weight
+- BONK is 1.7-2.8x BTC volatility → strict weighting puts BONK at ~35-60% of BTC weight
 
 **2. SOL-dominance compromise.** Pure volatility weighting would produce a BTC-dominant pool, but ALP is positioned as a Solana-ecosystem product. The deliberate compromise is to overweight SOL relative to its volatility-implied weight, accepting moderate additional NAV volatility for product coherence.
 
@@ -30,7 +30,7 @@ The target weights derive from four principles applied jointly.
 | BTC | 25% | 20% | 30% |
 | BONK | 10% | 7% | 15% |
 
-The Min/Max bands define the operating perimeter. Within the band the protocol does not intervene — mint and redeem fees naturally incentivize arbitrage back toward target. Sustained breaches (>14 days outside band) trigger a governance review of whether the target itself should adjust.
+The Min/Max bands define the operating perimeter. Within the band the protocol does not intervene - mint and redeem fees naturally incentivize arbitrage back toward target. Sustained breaches (>14 days outside band) trigger a governance review of whether the target itself should adjust.
 
 Band widths are asymmetric per asset:
 
@@ -39,7 +39,7 @@ Band widths are asymmetric per asset:
 
 ## Volatility Window
 
-All volatility computations — both initial weight derivation and future rebalancing decisions — use a **90-day rolling window**. Shorter windows are too sensitive to single events; longer windows lag market regime changes and produce stale weights.
+All volatility computations - both initial weight derivation and future rebalancing decisions - use a **90-day rolling window**. Shorter windows are too sensitive to single events; longer windows lag market regime changes and produce stale weights.
 
 ## Dynamic Mint and Redeem Fees
 

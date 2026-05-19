@@ -12,24 +12,24 @@ In a typical order-book based Perp DEX, when a trader opens a position, the coun
 
 ### Long Trades
 
-The user borrows long exposure of the asset based on their leverage from the Liquidity Pool (there is no actual borrowing — the trader locks assets in the pool to gain long exposure).
+The user borrows long exposure of the asset based on their leverage from the Liquidity Pool (there is no actual borrowing - the trader locks assets in the pool to gain long exposure).
 
 - **Trader is right** → Trader profits. The Liquidity Pool was deprived of the long exposure that goes to the trader instead. The pool does not lose capital, and accrues fees.
 - **Trader is wrong** → Trader eventually gets liquidated on their initial collateral. The locked long exposure is released. The pool accrues fees.
 
 ### Short Trades
 
-The user borrows stablecoins from the Liquidity Pool based on the platform's maximum profit (100%). Short positions have a limited upside — that's a limitation/security of this model.
+The user borrows stablecoins from the Liquidity Pool based on the platform's maximum profit (100%). Short positions have a limited upside - that's a limitation/security of this model.
 
 - **Trader is right** → Trader profits. The Liquidity Pool pays out stablecoins to the trader but accrues fees.
 - **Trader is wrong** → Trader eventually gets liquidated on their initial collateral. The locked short exposure is released. The pool accrues fees.
 
 ## Key Characteristics
 
-- LP revenues originate from fees and trader losses — when a trader is liquidated or closes at a loss, their collateral accrues to the pool
+- LP revenues originate from fees and trader losses - when a trader is liquidated or closes at a loss, their collateral accrues to the pool
 - The model may not be as capital efficient as order-book, but oracle-based pricing makes it popular
 - Limited by the size of the Liquidity Pool
-- Pool Asset Ratios are an important parameter — maximizing volatile assets while controlling overall long exposure
+- Pool Asset Ratios are an important parameter - maximizing volatile assets while controlling overall long exposure
 
 ## Risks for Liquidity Providers
 

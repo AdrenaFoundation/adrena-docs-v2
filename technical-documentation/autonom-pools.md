@@ -6,7 +6,7 @@ title: "Autonom Pools (RWA & Synthetic Assets)"
 
 ## Overview
 
-Autonom Pools are a new pool type in Adrena that enables trading on **real-world assets (RWA)** and **synthetic instruments** — such as equities, commodities, and indices — directly on Solana. Unlike standard GMX-style pools, Autonom pools hold no on-chain token reserves for the traded assets. Instead, positions are entirely USD-denominated and settled against stable collateral.
+Autonom Pools are a new pool type in Adrena that enables trading on **real-world assets (RWA)** and **synthetic instruments** - such as equities, commodities, and indices - directly on Solana. Unlike standard GMX-style pools, Autonom pools hold no on-chain token reserves for the traded assets. Instead, positions are entirely USD-denominated and settled against stable collateral.
 
 ---
 
@@ -15,7 +15,7 @@ Autonom Pools are a new pool type in Adrena that enables trading on **real-world
 | Feature | GMX Pool | Autonom Pool |
 |---------|----------|--------------|
 | Assets | Native crypto tokens (SOL, BTC, ETH…) | Synthetic: equities, commodities, RWA |
-| Custody | Holds actual tokens | No token custody — synthetic PDA only |
+| Custody | Holds actual tokens | No token custody - synthetic PDA only |
 | Collateral | Token or stablecoin | Stablecoin only |
 | Oracle providers (default) | Autonom → Switchboard → ChaosLabs | Autonom → Switchboard → ChaosLabs |
 | Multi-oracle `min_agree` (default) | 1 | 1 |
@@ -28,7 +28,7 @@ Both pool types ship with identical default `MultiOracleConfig` (Autonom primary
 
 ## Synthetic Custodies
 
-Each tradable asset in an Autonom Pool is represented by a **synthetic custody** — an on-chain account that records the aggregate open interest and fee state for that asset, but holds no tokens. Key properties:
+Each tradable asset in an Autonom Pool is represented by a **synthetic custody** - an on-chain account that records the aggregate open interest and fee state for that asset, but holds no tokens. Key properties:
 
 - Identified by a unique seed (not a token mint), allowing multiple synthetic assets per pool (up to 32)
 - Tracks `cumulative_funding_paid_usd` and `cumulative_funding_received_usd` for [Virtual Funding Rate](virtual-funding-rate.md) accounting
@@ -38,11 +38,11 @@ Each tradable asset in an Autonom Pool is represented by a **synthetic custody**
 
 ## Market Hours
 
-Autonom Pool assets correspond to real-world instruments that only trade during certain hours (e.g., US equity market hours, 9:30 AM–4:00 PM ET on weekdays). The protocol enforces this:
+Autonom Pool assets correspond to real-world instruments that only trade during certain hours (e.g., US equity market hours, 9:30 AM-4:00 PM ET on weekdays). The protocol enforces this:
 
 - **`market_open_timestamp`** / **`market_close_timestamp`**: Define the active trading window for the pool
 - **Opening a position** outside market hours returns a `MarketIsClosed` error
-- **Existing positions** remain open through market close — they settle at next open or at the holder's discretion
+- **Existing positions** remain open through market close - they settle at next open or at the holder's discretion
 
 ---
 
@@ -87,4 +87,4 @@ Liquidation mechanics for Autonom Pool positions follow the same margin rules as
 
 ## Collateral
 
-All Autonom Pool positions use stablecoin collateral (USDC or equivalent). There is no token exposure on the collateral side — your profit/loss and collateral are both denominated in USD.
+All Autonom Pool positions use stablecoin collateral (USDC or equivalent). There is no token exposure on the collateral side - your profit/loss and collateral are both denominated in USD.

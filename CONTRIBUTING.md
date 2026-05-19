@@ -1,4 +1,4 @@
-# Adrena Docs — Local Clone
+# Adrena Docs - Local Clone
 
 A local GitBook-compatible clone of [docs.adrena.trade](https://docs.adrena.trade), structured for editing and syncing back via GitHub → GitBook.
 

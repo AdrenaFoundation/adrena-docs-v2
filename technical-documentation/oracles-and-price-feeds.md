@@ -15,9 +15,9 @@ As of Release 39, Adrena sources prices from **multiple independent oracle provi
 
 | Provider | Feed ID Range | Mechanism |
 |----------|--------------|-----------|
-| **ChaosLabs** | 0 – 29 | Off-chain signed batch prices (secp256k1) |
-| **Autonom** | 30 – 141 | Off-chain signed batch prices (secp256k1) + market session data |
-| **Switchboard** | 142 – 255 | On-chain quote account verification (ed25519 precompile) |
+| **ChaosLabs** | 0 - 29 | Off-chain signed batch prices (secp256k1) |
+| **Autonom** | 30 - 141 | Off-chain signed batch prices (secp256k1) + market session data |
+| **Switchboard** | 142 - 255 | On-chain quote account verification (ed25519 precompile) |
 
 Switchboard prices are verified entirely on-chain via the ed25519 precompile. ChaosLabs and Autonom deliver signed price batches that are secp256k1-recovered and validated on-chain before use.
 
@@ -29,7 +29,7 @@ A `MultiOracleConfig` is attached to each pool, controlling how prices from mult
 
 | Parameter | Description |
 |-----------|-------------|
-| `min_agree` | Minimum number of providers that must agree on a price (1–3) |
+| `min_agree` | Minimum number of providers that must agree on a price (1-3) |
 | `price_diff_threshold_bps` | Maximum allowed price deviation between providers (100 BPS = 1%) |
 | `staleness_seconds` | Maximum age of an accepted price (default: 7 seconds) |
 
@@ -37,7 +37,7 @@ A `MultiOracleConfig` is attached to each pool, controlling how prices from mult
 
 Both pool types ship with the same baseline multi-oracle config. Governance can tune these post-migration via `set_pool_oracle_config`.
 
-**Standard (GMX style) Pools** — crypto assets:
+**Standard (GMX style) Pools** - crypto assets:
 - Providers order: Autonom → Switchboard → ChaosLabs
 - `min_agree`: 1
 - `price_diff_threshold_bps`: 100
@@ -45,7 +45,7 @@ Both pool types ship with the same baseline multi-oracle config. Governance can 
 - `asymmetric_liquidation`: disabled
 - `circuit_breaker_enabled`: disabled
 
-**Autonom Pools** — RWA/synthetic assets:
+**Autonom Pools** - RWA/synthetic assets:
 - Providers order: Autonom → Switchboard → ChaosLabs
 - `min_agree`: 1
 - `price_diff_threshold_bps`: 100
@@ -59,8 +59,8 @@ Both pool types ship with the same baseline multi-oracle config. Governance can 
 
 To protect the liquidity pool against adverse price selection:
 
-- **Long positions** are priced using the oracle's **lower bound** — the worst case for a long entry/exit
-- **Short positions** are priced using the oracle's **upper bound** — the worst case for a short entry/exit
+- **Long positions** are priced using the oracle's **lower bound** - the worst case for a long entry/exit
+- **Short positions** are priced using the oracle's **upper bound** - the worst case for a short entry/exit
 
 This means traders always transact at the conservative end of the oracle's confidence interval, reducing the pool's exposure to oracle manipulation.
 
@@ -91,7 +91,7 @@ This requires Switchboard quote accounts to be passed as remaining accounts in r
 For pools that temporarily fall back to a single oracle provider, **asymmetric liquidation** is available. When enabled, a liquidation can only proceed if a backup oracle has also provided a recent, confirming price for that asset. This prevents liquidations being triggered by a single stale or manipulated feed.
 
 ### Circuit Breaker
-When enabled, the circuit breaker **pauses all liquidations** if no backup oracle has delivered a fresh price within the configured window (default: 300 seconds). This is a safety valve for infrastructure outages — protecting traders from being liquidated on stale prices when oracle redundancy is temporarily unavailable.
+When enabled, the circuit breaker **pauses all liquidations** if no backup oracle has delivered a fresh price within the configured window (default: 300 seconds). This is a safety valve for infrastructure outages - protecting traders from being liquidated on stale prices when oracle redundancy is temporarily unavailable.
 
 | Parameter | Description |
 |-----------|-------------|

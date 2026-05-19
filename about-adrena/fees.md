@@ -26,8 +26,8 @@ The borrow fee compensates liquidity providers for the pool assets locked agains
 
 Adrena uses a **two-slope borrow rate model** with a utilization kink:
 
-- **Below optimal utilization**: Rate increases gradually from 0 to a midpoint rate — capital is available, so borrowing is cheap
-- **Above optimal utilization**: Rate increases steeply from the midpoint to the maximum — scarcity of pool assets is reflected in cost
+- **Below optimal utilization**: Rate increases gradually from 0 to a midpoint rate - capital is available, so borrowing is cheap
+- **Above optimal utilization**: Rate increases steeply from the midpoint to the maximum - scarcity of pool assets is reflected in cost
 
 This makes borrowing cost efficient during normal conditions while strongly incentivizing position reduction when the pool is heavily utilized.
 

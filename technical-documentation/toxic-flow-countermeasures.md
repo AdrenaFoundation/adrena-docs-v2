@@ -12,7 +12,7 @@ GMX-inspired perp venues have liquidity fuelled by passive liquidity providers, 
 ## How Other Platforms Handle It
 
 - **GMX**: Splits trades into 2 transactions, introducing latency. This acts as a delay-based protection but harms UX significantly.
-- **Jupiter Perps**: Uses a keeper model — receives trade intents and funds, then eventually submits trades. Heavy UX during high volatility (comparable to 4 seconds of latency).
+- **Jupiter Perps**: Uses a keeper model - receives trade intents and funds, then eventually submits trades. Heavy UX during high volatility (comparable to 4 seconds of latency).
 
 ## Adrena's Approach
 
