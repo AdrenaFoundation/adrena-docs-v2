@@ -4,7 +4,7 @@ title: "TypeScript SDK"
 
 # TypeScript SDK 🛠️
 
-The Adrena TypeScript SDK provides a high-level interface for interacting with the Adrena Protocol on Solana — opening and closing perpetual positions, managing liquidity, staking tokens, and querying off-chain analytics.
+The Adrena TypeScript SDK provides a high-level interface for interacting with the Adrena Protocol on Solana - opening and closing perpetual positions, managing liquidity, staking tokens, and querying off-chain analytics.
 
 Built on [@solana/kit](https://github.com/anza-xyz/kit) (Web3.js v2). All transactions are submitted via [Jito bundles](https://www.jito.network/) for MEV protection.
 
@@ -26,7 +26,7 @@ yarn add adrena-sdk-ts@beta
 
 All SDK functions require a `wallet` (transaction signer) and an `rpc` client. Use `createKitClient` to create both.
 
-### Option 1 — `.env` file (recommended)
+### Option 1 - `.env` file (recommended)
 
 Create a `.env` file in your project root:
 
@@ -46,7 +46,7 @@ import { createKitClient } from 'adrena-sdk-ts/clients';
 const { wallet, rpc } = await createKitClient();
 ```
 
-### Option 2 — Pass credentials directly
+### Option 2 - Pass credentials directly
 
 ```typescript
 import { createKitClient } from 'adrena-sdk-ts/clients';
@@ -63,7 +63,7 @@ const { wallet, rpc } = await createKitClient({
 
 Adrena runs two separate on-chain pools. The SDK exposes both.
 
-### Main Pool — Crypto Assets
+### Main Pool - Crypto Assets
 
 | Symbol  | Role                     | Decimals |
 |---------|--------------------------|----------|
@@ -72,14 +72,14 @@ Adrena runs two separate on-chain pools. The SDK exposes both.
 | BONK    | Principal / Collateral   | 5        |
 | USDC    | Collateral / Liquidity   | 6        |
 
-**`PrincipalToken`** — the asset being traded: `"JITOSOL" | "WBTC" | "BONK"`
+**`PrincipalToken`** - the asset being traded: `"JITOSOL" | "WBTC" | "BONK"`
 
-**`CollateralToken`** — the asset deposited as margin: `"USDC" | "JITOSOL" | "WBTC" | "BONK"`
+**`CollateralToken`** - the asset deposited as margin: `"USDC" | "JITOSOL" | "WBTC" | "BONK"`
 
 > For **longs**, the collateral token must match the principal token (e.g. a JITOSOL long requires JITOSOL collateral).
 > For **shorts**, the collateral token must always be `"USDC"`.
 
-### Commodities Pool — Synthetic Assets
+### Commodities Pool - Synthetic Assets
 
 | Symbol | Name      | Decimals |
 |--------|-----------|----------|
@@ -87,9 +87,9 @@ Adrena runs two separate on-chain pools. The SDK exposes both.
 | XAG    | Silver    | 6        |
 | WTI    | Crude Oil | 6        |
 
-**`CommodityToken`** — `"XAU" | "XAG" | "WTI"`
+**`CommodityToken`** - `"XAU" | "XAG" | "WTI"`
 
-Commodity positions are collateralised in USDC for both longs and shorts. There is no token swap — you deposit USDC and trade a price-feed-backed synthetic custody settled in USDC on close.
+Commodity positions are collateralised in USDC for both longs and shorts. There is no token swap - you deposit USDC and trade a price-feed-backed synthetic custody settled in USDC on close.
 
 ---
 

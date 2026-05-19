@@ -12,7 +12,7 @@ For synthetic commodity trading (XAU, XAG, WTI) see [Commodities](commodities.md
 
 ## Open a Long Position
 
-For longs the `collateralToken` must match the `principalToken` — you deposit the asset you are trading.
+For longs the `collateralToken` must match the `principalToken` - you deposit the asset you are trading.
 
 ```typescript
 import { openMarketLong } from 'adrena-sdk-ts/core';
@@ -27,8 +27,8 @@ const result = await openMarketLong({
   collateralToken: 'JITOSOL',  // must match principal for longs
   collateralAmount: 10,         // human-readable units (10 JITOSOL)
   leverage: 3,                  // leverage multiplier
-  stopLossPrice: 130,           // optional — trigger price in USD
-  takeProfitPrice: 180,         // optional — trigger price in USD
+  stopLossPrice: 130,           // optional - trigger price in USD
+  takeProfitPrice: 180,         // optional - trigger price in USD
 });
 
 console.log('tx:', result.txSignature);
@@ -54,8 +54,8 @@ const result = await openMarketShort({
   collateralToken: 'USDC',    // must be USDC for shorts
   collateralAmount: 50,        // 50 USDC
   leverage: 5,
-  stopLossPrice: 175,          // optional — above entry price for shorts
-  takeProfitPrice: 120,        // optional — below entry price for shorts
+  stopLossPrice: 175,          // optional - above entry price for shorts
+  takeProfitPrice: 120,        // optional - below entry price for shorts
 });
 ```
 
@@ -75,7 +75,7 @@ const result = await closeLong({
   wallet,
   rpc,
   principalToken: 'JITOSOL',
-  // price: 155.0,  // optional — override close price
+  // price: 155.0,  // optional - override close price
 });
 ```
 

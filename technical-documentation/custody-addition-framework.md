@@ -32,7 +32,7 @@ A new asset's target weight is determined by:
 Adding an asset means reducing existing weights. The protocol does not dump existing assets to fund the new custody.
 
 1. The new asset's initial target weight is determined per the rules above
-2. Existing volatile assets reduce pro-rata to make room - USDC anchor remains at 30%, the volatile basket goes from 70% to (70% − new\_weight)%
+2. Existing volatile assets reduce pro-rata to make room - USDC anchor remains at 30%, the volatile basket goes from 70% to (70% - new\_weight)%
 3. Market mint/redeem flow migrates the pool composition over a 30-day window, with mint and redeem fees adjusted to incentivize correct flow (same dynamic fee mechanism as standard rebalancing)
 4. Protocol-driven swaps are reserved as a fallback if the 30-day market-driven path fails to converge
 

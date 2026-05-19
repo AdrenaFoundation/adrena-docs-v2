@@ -4,7 +4,7 @@ title: "Data API"
 
 # Data API 📊
 
-The SDK includes a REST client for querying off-chain analytics — position history, pool statistics, leaderboards, oracle prices, and more. This is separate from the on-chain RPC interface.
+The SDK includes a REST client for querying off-chain analytics - position history, pool statistics, leaderboards, oracle prices, and more. This is separate from the on-chain RPC interface.
 
 ---
 
@@ -160,4 +160,4 @@ const txSig = await sendTransactionWithJito(
 );
 ```
 
-All liquidity and staking instruction builders follow the same pattern — see `src/instructions/` in the SDK repository for the full set.
+All liquidity and staking instruction builders follow the same pattern - see `src/instructions/` in the SDK repository for the full set.

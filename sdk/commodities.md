@@ -4,7 +4,7 @@ title: "Commodities"
 
 # Commodities ⚗️
 
-The SDK supports synthetic commodity perpetuals through the dedicated commodities pool — trade Gold (XAU), Silver (XAG), and Crude Oil (WTI) against price feeds sourced from Adrena's oracle system.
+The SDK supports synthetic commodity perpetuals through the dedicated commodities pool - trade Gold (XAU), Silver (XAG), and Crude Oil (WTI) against price feeds sourced from Adrena's oracle system.
 
 See [Oracles and Price Feeds](../technical-documentation/oracles-and-price-feeds.md) and [Autonom Pools](../technical-documentation/autonom-pools.md) for the underlying protocol mechanics.
 
@@ -12,10 +12,10 @@ See [Oracles and Price Feeds](../technical-documentation/oracles-and-price-feeds
 
 ## Key Differences from Crypto Trading
 
-- **Collateral is always USDC** — for both longs and shorts, regardless of the commodity
-- **`collateralAmount` is in native units** — multiply the human amount by `10^6` (USDC has 6 decimals)
-- **Settlement in USDC** — closing a position always returns USDC
-- **No token swap** — you deposit USDC and gain synthetic exposure to the price feed; no physical asset is involved
+- **Collateral is always USDC** - for both longs and shorts, regardless of the commodity
+- **`collateralAmount` is in native units** - multiply the human amount by `10^6` (USDC has 6 decimals)
+- **Settlement in USDC** - closing a position always returns USDC
+- **No token swap** - you deposit USDC and gain synthetic exposure to the price feed; no physical asset is involved
 
 ---
 
@@ -36,7 +36,7 @@ const result = await openCommodityLong({
   commodityToken: 'XAU',
   collateralAmount: BigInt(100_000_000), // 100 USDC (6 decimals)
   leverage: 5,
-  // price: 2_050,  // optional — override oracle price in USD
+  // price: 2_050,  // optional - override oracle price in USD
 });
 
 console.log('tx:', result.txSignature);
@@ -83,7 +83,7 @@ const result = await closeCommodityLong({
   wallet,
   rpc,
   commodityToken: 'XAU',
-  // price: 2_100,  // optional — override oracle price
+  // price: 2_100,  // optional - override oracle price
 });
 ```
 

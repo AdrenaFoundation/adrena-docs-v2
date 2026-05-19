@@ -85,7 +85,7 @@ const result = await swap({
 });
 ```
 
-Swaps execute through the pool's internal price oracle — the same zero-slippage mechanism used for trades.
+Swaps execute through the pool's internal price oracle - the same zero-slippage mechanism used for trades.
 
 ---
 
@@ -107,4 +107,4 @@ Native unit amounts are required for liquidity and swap functions. Use the table
 
 Set `minLpAmountOut` / `minAmountOut` to a non-zero value to reject the transaction if the pool price moves adversely between submission and execution.
 
-A value of `BigInt(0)` disables the check — acceptable for testing but not recommended in production.
+A value of `BigInt(0)` disables the check - acceptable for testing but not recommended in production.

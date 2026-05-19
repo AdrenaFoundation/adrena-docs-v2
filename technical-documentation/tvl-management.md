@@ -13,7 +13,7 @@ This is not a yield guarantee. Fees can fall and APY can dip. What the framework
 Every TVL decision anchors to a single, publicly computable metric.
 
 ```
-                   (F_W × 365/W × 0.75) − TraderPnL_W − ULP_W
+                   (F_W × 365/W × 0.75) - TraderPnL_W - ULP_W
 Reference APY  =  ────────────────────────────────────────────
                                   TVL_W avg
 ```

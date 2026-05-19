@@ -27,7 +27,7 @@ The rate scales with the imbalance - the more skewed OI is, the higher the fundi
 
 The hourly funding rate is determined by OI imbalance and a configurable sensitivity:
 
-1. **OI Imbalance** =  |long OI − short OI| / total OI, expressed in BPS
+1. **OI Imbalance** =  |long OI - short OI| / total OI, expressed in BPS
 2. **Scaled Imbalance** = imbalance × imbalance_sensitivity_bps / 10,000
 3. **Funding Rate** = max_hourly_funding_rate × scaled_imbalance / 10,000
 4. Rate is capped at `max_hourly_funding_rate`
