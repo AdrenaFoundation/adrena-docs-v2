@@ -29,4 +29,4 @@ Adrena monitors `markout_1m`, `5m`, and `10m` to see the PnL of trades 1/5/10 mi
 ---
 
 
-See [Position Exit Fees](../about-adrena/what-is-adrena/position-exit-fees.md) for the full breakdown.
+See [Fees](../about-adrena/fees.md) for the full breakdown.
