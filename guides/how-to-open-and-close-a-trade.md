@@ -9,7 +9,7 @@ source: "https://docs.adrena.trade/guides/how-to-open-and-close-a-trade"
 
 ## Opening a Trade
 
-1. Go to [app.adrena.trade](https://app.adrena.trade)
+1. Go to [adrena.trade](https://adrena.trade)
 2. Connect your wallet
 3. Select a market (e.g., SOL/USD)
 4. Choose Long or Short
