@@ -28,8 +28,8 @@ Liquid stakes have no lock-up period. You can unstake at any time.
 ### Add Liquid Stake
 
 ```typescript
-import { addLiquidStake } from 'adrena-sdk-ts/core';
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { addLiquidStake } from 'adrena-sdk/core';
+import { createKitClient } from 'adrena-sdk/clients';
 
 const { wallet, rpc } = await createKitClient();
 
@@ -45,8 +45,8 @@ await addLiquidStake({
 ### Remove Liquid Stake
 
 ```typescript
-import { removeLiquidStake } from 'adrena-sdk-ts/core';
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { removeLiquidStake } from 'adrena-sdk/core';
+import { createKitClient } from 'adrena-sdk/clients';
 
 const { wallet, rpc } = await createKitClient();
 
@@ -67,8 +67,8 @@ Lock a stake for a fixed duration to earn boosted rewards. Longer durations prov
 ### Add Locked Stake
 
 ```typescript
-import { addLockedStake } from 'adrena-sdk-ts/core';
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { addLockedStake } from 'adrena-sdk/core';
+import { createKitClient } from 'adrena-sdk/clients';
 
 const { wallet, rpc } = await createKitClient();
 
@@ -93,8 +93,8 @@ await addLockedStake({
 After the lock period expires, withdraw by providing the index of the lock in the `UserStaking` account (zero-based).
 
 ```typescript
-import { removeLockedStake } from 'adrena-sdk-ts/core';
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { removeLockedStake } from 'adrena-sdk/core';
+import { createKitClient } from 'adrena-sdk/clients';
 
 const { wallet, rpc } = await createKitClient();
 
@@ -113,8 +113,8 @@ await removeLockedStake({
 Claims all pending USDC fee rewards and ADX emissions for the given staking type.
 
 ```typescript
-import { claimStakes } from 'adrena-sdk-ts/core';
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { claimStakes } from 'adrena-sdk/core';
+import { createKitClient } from 'adrena-sdk/clients';
 
 const { wallet, rpc } = await createKitClient();
 

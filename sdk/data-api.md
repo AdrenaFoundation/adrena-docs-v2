@@ -13,7 +13,7 @@ The SDK includes a REST client for querying off-chain analytics - position histo
 Full API reference is available at [datapi.adrena.trade/docs](https://datapi.adrena.trade/docs).
 
 ```typescript
-import { AdrenaApi } from 'adrena-sdk-ts/adrena-api';
+import { AdrenaApi } from 'adrena-sdk/adrena-api';
 
 const api = new AdrenaApi(); // defaults to datapi.adrena.trade
 ```
@@ -134,9 +134,9 @@ const tradingPrices = await api.getLastTradingPrices();
 Every `core` function is a thin wrapper around an `instructions` builder that then submits via Jito. Use the builders directly when you need to compose custom transactions.
 
 ```typescript
-import { getOpenLongIxs } from 'adrena-sdk-ts/instructions';
-import { sendTransactionWithJito, ADRENA_LOOKUP_TABLE_ADDRESS } from 'adrena-sdk-ts/helpers';
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { getOpenLongIxs } from 'adrena-sdk/instructions';
+import { sendTransactionWithJito, ADRENA_LOOKUP_TABLE_ADDRESS } from 'adrena-sdk/helpers';
+import { createKitClient } from 'adrena-sdk/clients';
 
 const { wallet, rpc } = await createKitClient();
 

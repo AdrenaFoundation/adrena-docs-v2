@@ -15,8 +15,8 @@ For synthetic commodity trading (XAU, XAG, WTI) see [Commodities](commodities.md
 For longs the `collateralToken` must match the `principalToken` - you deposit the asset you are trading.
 
 ```typescript
-import { openMarketLong } from 'adrena-sdk-ts/core';
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { openMarketLong } from 'adrena-sdk/core';
+import { createKitClient } from 'adrena-sdk/clients';
 
 const { wallet, rpc } = await createKitClient();
 
@@ -42,8 +42,8 @@ console.log('position:', result.positionAddress);
 For shorts the `collateralToken` must be `"USDC"` regardless of which asset is being shorted.
 
 ```typescript
-import { openMarketShort } from 'adrena-sdk-ts/core';
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { openMarketShort } from 'adrena-sdk/core';
+import { createKitClient } from 'adrena-sdk/clients';
 
 const { wallet, rpc } = await createKitClient();
 
@@ -66,8 +66,8 @@ const result = await openMarketShort({
 Closes the existing long position for the given principal token. Defaults to the current oracle price.
 
 ```typescript
-import { closeLong } from 'adrena-sdk-ts/core';
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { closeLong } from 'adrena-sdk/core';
+import { createKitClient } from 'adrena-sdk/clients';
 
 const { wallet, rpc } = await createKitClient();
 
@@ -84,8 +84,8 @@ const result = await closeLong({
 ## Close a Short Position
 
 ```typescript
-import { closeShort } from 'adrena-sdk-ts/core';
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { closeShort } from 'adrena-sdk/core';
+import { createKitClient } from 'adrena-sdk/clients';
 
 const { wallet, rpc } = await createKitClient();
 
@@ -104,15 +104,15 @@ const result = await closeShort({
 Fetch live P&L, size, liquidation price, and other position metrics.
 
 ```typescript
-import { getPositionStatus } from 'adrena-sdk-ts/core';
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { getPositionStatus } from 'adrena-sdk/core';
+import { createKitClient } from 'adrena-sdk/clients';
 import {
   fetchPoolUtil,
   loadCustodies,
   getCustodyByMint,
   findPositionAddress,
   PRINCIPAL_ADDRESSES,
-} from 'adrena-sdk-ts/helpers';
+} from 'adrena-sdk/helpers';
 
 const { wallet, rpc } = await createKitClient();
 
@@ -158,8 +158,8 @@ console.log(status);
 Place a conditional order that fills when the oracle price reaches a target level.
 
 ```typescript
-import { addLimitOrder } from 'adrena-sdk-ts/core';
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { addLimitOrder } from 'adrena-sdk/core';
+import { createKitClient } from 'adrena-sdk/clients';
 
 const { wallet, rpc } = await createKitClient();
 
@@ -183,8 +183,8 @@ const result = await addLimitOrder({
 Cancels an existing stop-loss and/or take-profit attached to an open position.
 
 ```typescript
-import { cancelSLTP } from 'adrena-sdk-ts/core';
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { cancelSLTP } from 'adrena-sdk/core';
+import { createKitClient } from 'adrena-sdk/clients';
 
 const { wallet, rpc } = await createKitClient();
 
@@ -205,7 +205,7 @@ const result = await cancelSLTP(
 All core functions submit transactions via Jito bundles. Use `checkTransactionConfirmed` to poll for on-chain confirmation:
 
 ```typescript
-import { checkTransactionConfirmed } from 'adrena-sdk-ts/helpers';
+import { checkTransactionConfirmed } from 'adrena-sdk/helpers';
 
 const result = await openMarketLong({ ... });
 
