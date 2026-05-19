@@ -1,5 +1,5 @@
 ---
-title: "ALP"
+title: "LP Tokens"
 source: "https://docs.adrena.trade/tokenomics/alp"
 ---
 
