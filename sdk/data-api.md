@@ -15,7 +15,7 @@ Full API reference is available at [datapi.adrena.trade/docs](https://datapi.adr
 ```typescript
 import { AdrenaApi } from 'adrena-sdk-ts/adrena-api';
 
-const api = new AdrenaApi(); // defaults to datapi.adrena.xyz
+const api = new AdrenaApi(); // defaults to datapi.adrena.trade
 ```
 
 To point to a custom endpoint:
