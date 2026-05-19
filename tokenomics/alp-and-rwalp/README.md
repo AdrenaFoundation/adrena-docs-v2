@@ -1,6 +1,6 @@
 ---
-title: "ALP"
-source: "https://docs.adrena.trade/tokenomics/alp"
+title: "ALP & RW-ALP"
+source: "https://docs.adrena.trade/tokenomics/alp-and-rwalp"
 ---
 
 # ALP & RW-ALP 💎

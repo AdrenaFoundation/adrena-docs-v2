@@ -21,7 +21,7 @@
 
 * [Tokenomics Overview](tokenomics/tokenomics-overview.md)
 * [ADX](tokenomics/adx.md)
-* [ALP](tokenomics/alp/README.md)
+* [ALP & RW-ALP](tokenomics/alp-and-rwalp/README.md)
 
 ## Technical Documentation
 
