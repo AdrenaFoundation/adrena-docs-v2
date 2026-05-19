@@ -15,8 +15,8 @@ See [ALP](../tokenomics/alp/README.md) for tokenomics details.
 Deposit a supported collateral token to receive ALP in return. Amounts are expressed in native token units.
 
 ```typescript
-import { addLiquidity } from 'adrena-sdk-ts/core';
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { addLiquidity } from 'adrena-sdk/core';
+import { createKitClient } from 'adrena-sdk/clients';
 
 const { wallet, rpc } = await createKitClient();
 
@@ -49,8 +49,8 @@ await addLiquidity({
 Burn ALP tokens to withdraw a collateral token from the pool.
 
 ```typescript
-import { removeLiquidity } from 'adrena-sdk-ts/core';
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { removeLiquidity } from 'adrena-sdk/core';
+import { createKitClient } from 'adrena-sdk/clients';
 
 const { wallet, rpc } = await createKitClient();
 
@@ -70,8 +70,8 @@ const result = await removeLiquidity({
 Swap between any two supported collateral tokens through the ALP pool.
 
 ```typescript
-import { swap } from 'adrena-sdk-ts/core';
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { swap } from 'adrena-sdk/core';
+import { createKitClient } from 'adrena-sdk/clients';
 
 const { wallet, rpc } = await createKitClient();
 

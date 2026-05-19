@@ -24,8 +24,8 @@ See [Oracles and Price Feeds](../technical-documentation/oracles-and-price-feeds
 Go long on a commodity price feed with USDC collateral.
 
 ```typescript
-import { openCommodityLong } from 'adrena-sdk-ts/core';
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { openCommodityLong } from 'adrena-sdk/core';
+import { createKitClient } from 'adrena-sdk/clients';
 
 const { wallet, rpc } = await createKitClient();
 
@@ -52,8 +52,8 @@ The same function handles both opening a new position and increasing an existing
 Short a commodity price feed with USDC collateral.
 
 ```typescript
-import { openCommodityShort } from 'adrena-sdk-ts/core';
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { openCommodityShort } from 'adrena-sdk/core';
+import { createKitClient } from 'adrena-sdk/clients';
 
 const { wallet, rpc } = await createKitClient();
 
@@ -74,8 +74,8 @@ const result = await openCommodityShort({
 Closes the open long position for the given commodity. USDC is returned to the wallet.
 
 ```typescript
-import { closeCommodityLong } from 'adrena-sdk-ts/core';
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { closeCommodityLong } from 'adrena-sdk/core';
+import { createKitClient } from 'adrena-sdk/clients';
 
 const { wallet, rpc } = await createKitClient();
 
@@ -92,8 +92,8 @@ const result = await closeCommodityLong({
 ## Close a Commodity Short
 
 ```typescript
-import { closeCommodityShort } from 'adrena-sdk-ts/core';
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { closeCommodityShort } from 'adrena-sdk/core';
+import { createKitClient } from 'adrena-sdk/clients';
 
 const { wallet, rpc } = await createKitClient();
 

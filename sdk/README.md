@@ -14,10 +14,10 @@ Built on [@solana/kit](https://github.com/anza-xyz/kit) (Web3.js v2). All transa
 
 ```bash
 # npm
-npm install adrena-sdk-ts@beta
+npm install adrena-sdk@beta
 
 # yarn
-yarn add adrena-sdk-ts@beta
+yarn add adrena-sdk@beta
 ```
 
 ---
@@ -41,7 +41,7 @@ WS_URL=wss://your-ws-url.com
 Then in code:
 
 ```typescript
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { createKitClient } from 'adrena-sdk/clients';
 
 const { wallet, rpc } = await createKitClient();
 ```
@@ -49,7 +49,7 @@ const { wallet, rpc } = await createKitClient();
 ### Option 2 — Pass credentials directly
 
 ```typescript
-import { createKitClient } from 'adrena-sdk-ts/clients';
+import { createKitClient } from 'adrena-sdk/clients';
 
 const { wallet, rpc } = await createKitClient({
   privateKey: 'your-base58-private-key',
@@ -99,11 +99,11 @@ The SDK is split into focused sub-packages. Import only what you need.
 
 | Import path                | Purpose                                              |
 |----------------------------|------------------------------------------------------|
-| `adrena-sdk-ts/clients`    | Create the RPC + wallet client (`createKitClient`)   |
-| `adrena-sdk-ts/core`       | High-level trading, liquidity, and staking functions |
-| `adrena-sdk-ts/instructions` | Low-level instruction builders for custom transactions |
-| `adrena-sdk-ts/helpers`    | PDAs, math, token accounts, transaction utilities    |
-| `adrena-sdk-ts/adrena-api` | REST API client for off-chain data and analytics     |
+| `adrena-sdk/clients`    | Create the RPC + wallet client (`createKitClient`)   |
+| `adrena-sdk/core`       | High-level trading, liquidity, and staking functions |
+| `adrena-sdk/instructions` | Low-level instruction builders for custom transactions |
+| `adrena-sdk/helpers`    | PDAs, math, token accounts, transaction utilities    |
+| `adrena-sdk/adrena-api` | REST API client for off-chain data and analytics     |
 
 ---
 
