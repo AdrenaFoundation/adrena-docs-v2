@@ -13,3 +13,6 @@ Welcome to the official Adrena documentation. Adrena is a GMX-inspired perpetual
 - [Tokenomics](tokenomics/tokenomics-overview.md) - Governance & Liquidity Provision token details
 - [Technical Documentation](technical-documentation/oracles-and-price-feeds.md) - Deep-dive into protocol mechanics
 - [Guides](guides/how-to-open-and-close-a-trade.md) - Step-by-step tutorials
+
+<!-- resync: 2026-05-19 -->
+
