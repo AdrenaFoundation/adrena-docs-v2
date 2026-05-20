@@ -18,7 +18,23 @@ Adrena charges fees in four categories:
 
 ## Close Fees
 
-Close fees are a flat percentage of the **position size** (not collateral). The exact rates are set per asset and visible on the trading UI.
+Close fees are a flat percentage of the **position size** (not collateral). Rates are set per asset on-chain and adjustable by governance.
+
+**Main Pool**
+
+| Asset | Close Fee (BPS) | Close Fee (%) |
+|-------|-----------------|---------------|
+| SOL   | 10              | 0.10%         |
+| BTC   | 10              | 0.10%         |
+| BONK  | 18              | 0.18%         |
+
+**Commodities Pool**
+
+| Asset | Close Fee (BPS) | Close Fee (%) |
+|-------|-----------------|---------------|
+| XAU   | 16              | 0.16%         |
+| XAG   | 16              | 0.16%         |
+| WTI   | 16              | 0.16%         |
 
 ## Borrow Fee (Two-Slope Model)
 
