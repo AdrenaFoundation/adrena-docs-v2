@@ -32,9 +32,9 @@ Close fees are a flat percentage of the **position size** (not collateral). Rate
 
 | Asset | Close Fee (BPS) | Close Fee (%) |
 |-------|-----------------|---------------|
-| XAU   | 16              | 0.16%         |
-| XAG   | 16              | 0.16%         |
-| WTI   | 16              | 0.16%         |
+| XAU   | 10              | 0.10%         |
+| XAG   | 10              | 0.10%         |
+| WTI   | 10              | 0.10%         |
 
 ## Borrow Fee (Two-Slope Model)
 
