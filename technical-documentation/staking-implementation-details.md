@@ -5,7 +5,7 @@ source: "https://docs.adrena.trade/technical-documentation/staking-implementatio
 
 # Staking Details 🏦
 
-Adrena and its 100% revenue sharing is all about redistributing revenues as the core feature of the platform. A big chunk of that is done through ALP (pool's share) appreciation, as most of the fee revenues go back to the pool directly.
+Adrena is all about redistributing revenues as the core feature of the platform. A big chunk of that is done through ALP (pool's share) appreciation, as most of the fee revenues go back to the pool directly.
 
 The exact distribution is as follow:
 
